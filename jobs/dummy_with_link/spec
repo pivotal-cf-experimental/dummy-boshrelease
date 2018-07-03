@@ -1,0 +1,10 @@
+---
+name: dummy_with_link
+
+templates:
+  ctl.erb: bin/dummy_ctl
+
+provides:
+- name: link_from_dummy
+  type: dummy_link
+
