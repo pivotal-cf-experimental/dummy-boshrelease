@@ -43,6 +43,8 @@ Dummy BOSH release has the following jobs:
 
 1. `dummy_errand` has no packages and echo to stdout
 
+1. `dummy_with_link` provides a link named `link_from_dummy`
+
 Use `dummy-boshrelease` to create a deployment manifest more easily, especially handy if it's your first time
 creating a deployment manifest.
 
