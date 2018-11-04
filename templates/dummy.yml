@@ -17,6 +17,7 @@ stemcells:
 instance_groups:
 - name: dummy
   instances: 1
+  persistent_disk: 1024
   vm_type: tiny
   stemcell: ubuntu
   networks:
