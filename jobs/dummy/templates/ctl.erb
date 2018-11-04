@@ -18,11 +18,12 @@ exec 2>> $LOG_DIR/$JOB_NAME.stderr.log
 case $1 in
 
   start)
-    mkdir -p $RUN_DIR $LOG_DIR $EPHEMERAL
+    mkdir -p $RUN_DIR $LOG_DIR $EPHEMERAL $PERSISTENT
     chown -R $RUNAS:$RUNAS $RUN_DIR $LOG_DIR $EPHEMERAL $PERSISTENT
 
     ## Start Code Here
     echo 1 >> $PIDFILE
+    su vcap -c "echo 'Hello world' >> $PERSISTENT/hello.txt"
 
     ;;
 
